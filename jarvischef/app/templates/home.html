@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Know Food Recipes Here</title>
+    <style>
+        .container {
+            width: 520px; /* Adjusted width for the container */
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container input,
+        .container button {
+            width: 500px; /* Set width for input and button */
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        .container button {
+            background-color: #FFA07A; /* Light orange color */
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background-color: #FF7F50; /* Darker shade on hover */
+        }
+        h1 {
+            color: #FFA07A; /* Light orange color for heading */
+            text-align: center;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .recipe {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .recipe h2 {
+            color: #FFA07A;
+            text-align: center;
+        }
+        .resp-container {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .resp-container ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Know Food Recipes Here</h1>
+    <div class="image-container">
+        <img src="https://www.shutterstock.com/shutterstock/photos/754199197/display_1500/stock-vector-smiling-chef-cartoon-character-holding-silver-platter-754199197.jpg" alt="Food Image" width="200" height="200"> <!-- Adjust the src attribute to your image path -->
+    </div>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="inputField" placeholder="Enter something...">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="resp-container">
+        <h3>Response:</h3>
+        <p>{{resp}}</p>
+    </div>
+</body>
+</html>
