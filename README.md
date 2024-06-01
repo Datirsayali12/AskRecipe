@@ -9,7 +9,7 @@
 
 ## Screenshots
 
-![Home](screenshots/foodss.png)
+![Home](foodss.png)
 
 
 ## Installation
